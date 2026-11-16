@@ -34,14 +34,26 @@ export function Header() {
       }
     };
     document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    // Stop the page scrolling behind the open menu.
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
   }, [open]);
 
   const joinHref = nav.joinPilot.hrefByPath[pathname] ?? nav.joinPilot.href;
   const close = () => setOpen(false);
 
   return (
-    <header className={scrolled ? "nav scrolled" : "nav"}>
+    <header
+      className={["nav", scrolled && "scrolled", open && "menu-open"]
+        .filter(Boolean)
+        .join(" ")}
+    >
+      {/* Dims the page behind the open mobile menu; tap to close. */}
+      {open && <div className="nav-scrim" aria-hidden="true" onClick={close} />}
       <div className="wrap">
         <nav aria-label={nav.label} className="nav-bar">
           <Logo />
@@ -54,7 +66,7 @@ export function Header() {
             onClick={() => setOpen((o) => !o)}
           >
             {open ? <CloseIcon size={18} /> : <MenuIcon size={18} />}
-            {nav.menuLabel}
+            {open ? "Close" : nav.menuLabel}
           </button>
           <div
             id="site-nav-links"
