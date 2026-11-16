@@ -9,19 +9,17 @@ export function Audiences() {
   return (
     <Section variant="band">
       <SectionHead title={a.title} />
-      <div className="grid-auto">
+      <div className="grid-auto aud">
         {a.cards.map((c, i) => (
           <Card
             key={c.kicker}
             index={i}
             className={c.featured ? "feature" : undefined}
-            style={{ padding: 32, gap: 16 }}
+            style={{ gap: 16 }}
           >
             {c.badge ? (
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <span className="kicker" style={{ color: "#3f3f46" }}>
-                  {c.kicker}
-                </span>
+                <span className="kicker">{c.kicker}</span>
                 <Badge>{c.badge}</Badge>
               </div>
             ) : (

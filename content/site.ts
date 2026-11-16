@@ -25,15 +25,6 @@ export const site = {
       { label: "Platform", href: "/platform" },
       { label: "Who it's for", href: "/who-its-for" },
     ],
-    joinPilot: {
-      label: "Join the pilot",
-      href: "/#pilot",
-      // On "Who it's for" the design points this link at the contact form instead.
-      hrefByPath: { "/who-its-for": "/who-its-for#contact" } as Record<
-        string,
-        string
-      >,
-    },
     cta: { label: "Book a demo", href: "/who-its-for#contact" },
   },
   footer: {

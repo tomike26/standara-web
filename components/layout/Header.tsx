@@ -46,7 +46,6 @@ export function Header() {
     };
   }, [open]);
 
-  const joinHref = nav.joinPilot.hrefByPath[pathname] ?? nav.joinPilot.href;
   const close = () => setOpen(false);
 
   return (
@@ -85,9 +84,6 @@ export function Header() {
                 {l.label}
               </Link>
             ))}
-            <Link href={joinHref} onClick={close}>
-              {nav.joinPilot.label}
-            </Link>
             <Link
               href={nav.cta.href}
               className={buttonClass("blue")}

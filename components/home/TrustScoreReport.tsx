@@ -31,9 +31,7 @@ export function TrustScoreReport() {
       </div>
 
       <div className="stack" style={{ gap: 10 }}>
-        <p className="kicker" style={{ fontSize: 11 }}>
-          {r.breakdownLabel}
-        </p>
+        <p className="kicker">{r.breakdownLabel}</p>
         <div className="split-bar" aria-hidden="true">
           {r.breakdown.map((b) => (
             <div key={b.tone} className={b.tone} style={{ flex: b.weight }} />
@@ -50,7 +48,7 @@ export function TrustScoreReport() {
       </div>
 
       <div className="moves">
-        <p className="kicker" style={{ fontSize: 11, marginBottom: 2 }}>
+        <p className="kicker" style={{ marginBottom: 2 }}>
           {r.movesLabel}
         </p>
         {r.moves.map((m) => (

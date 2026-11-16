@@ -50,8 +50,8 @@ export function ScoreRing({
     <svg
       role="img"
       aria-label={label}
-      width="132"
-      height="132"
+      width="156"
+      height="156"
       viewBox="0 0 132 132"
     >
       <circle
@@ -59,8 +59,8 @@ export function ScoreRing({
         cy="66"
         r="54"
         fill="none"
-        stroke="#e7e5df"
-        strokeWidth="12"
+        stroke="#efede8"
+        strokeWidth="10"
       />
       <circle
         ref={arcRef}
@@ -69,8 +69,8 @@ export function ScoreRing({
         cy="66"
         r="54"
         fill="none"
-        stroke="#111113"
-        strokeWidth="12"
+        stroke="#d18f2a"
+        strokeWidth="10"
         strokeLinecap="round"
         strokeDasharray={dash}
         transform="rotate(-90 66 66)"
@@ -78,11 +78,11 @@ export function ScoreRing({
       <text
         className={hold ? "score-num hold" : "score-num"}
         x="66"
-        y="70"
+        y="72"
         textAnchor="middle"
         fontFamily="var(--font-archivo), sans-serif"
-        fontWeight="700"
-        fontSize="38"
+        fontWeight="800"
+        fontSize="42"
         fill="#111113"
         aria-hidden="true"
       >
@@ -90,7 +90,7 @@ export function ScoreRing({
       </text>
       <text
         x="66"
-        y="92"
+        y="93"
         textAnchor="middle"
         fontFamily="var(--font-plex-mono), monospace"
         fontSize="11"

@@ -11,9 +11,14 @@ export function EarlyDemand() {
         title={d.title}
         style={{ marginBottom: 40 }}
       />
-      <div className="grid-auto">
+      <div className="grid-auto grid-open">
         {d.cards.map((c, i) => (
-          <Card key={c.title} index={i} style={{ gap: 10 }}>
+          <Card
+            key={c.title}
+            index={i}
+            className="card-open"
+            style={{ gap: 10 }}
+          >
             <p
               className="h3"
               style={{

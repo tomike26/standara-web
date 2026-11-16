@@ -57,9 +57,9 @@ export function TrustScore() {
           </Reveal>
         </div>
         {/* Weight cards: percentages count up, meters fill. */}
-        <div className="grid-auto" style={{ gap: 16 }}>
+        <div className="grid-auto grid-open">
           {t.weights.map((w, i) => (
-            <Card key={w.title} index={i}>
+            <Card key={w.title} index={i} className="card-open">
               <p className="bigpct">
                 <CountUp value={w.pct} />
               </p>

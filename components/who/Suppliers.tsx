@@ -1,6 +1,5 @@
 import { CountUp } from "@/components/motion/CountUp";
 import { Reveal } from "@/components/motion/Reveal";
-import { ButtonLink } from "@/components/ui/Button";
 import { who } from "@/content/who";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 
@@ -29,9 +28,6 @@ export function Suppliers() {
             </h2>
             <p className="body-lg">{s.body}</p>
           </div>
-          <ButtonLink href={s.button.href} size="lg">
-            {s.button.label}
-          </ButtonLink>
         </div>
         <ol className="stepcards">
           {s.steps.map((step, i) => (

@@ -174,7 +174,7 @@
   }
   .h1 {
     font-weight: 700;
-    font-size: clamp(44px, 6.2vw, 80px);
+    font-size: clamp(38px, 6.2vw, 80px);
     line-height: 1.03;
     letter-spacing: -0.035em;
   }
@@ -1205,11 +1205,11 @@
   }
   .band .stepcards li {
     background: transparent;
-    border-color: rgba(0, 0, 0, 0.112);
+    border-color: #dcd9d2;
   }
   .band .stepcards li.hl {
-    border-color: #111113;
-    background: rgba(0, 0, 0, 0.028);
+    border-color: rgba(232, 163, 61, 0.55);
+    background: rgba(232, 163, 61, 0.08);
   }
   .band .stepcards .ix {
     font-family: var(--font-mono);
@@ -1530,6 +1530,243 @@
     .timeline li {
       grid-template-columns: 90px minmax(0, 1fr);
     }
+  }
+
+  /* =====================================================
+     DESIGN PASS
+     Quieter, more deliberate surfaces: small radii, flat cards,
+     rules instead of boxes, restrained headline weights, plain
+     sentence-case section labels, colour kept for actions.
+     ===================================================== */
+
+  /* Type */
+  .h1 {
+    font-weight: 600;
+    letter-spacing: -0.032em;
+    line-height: 1.02;
+    text-wrap: balance;
+  }
+  .h2 {
+    font-weight: 600;
+    font-size: clamp(30px, 3.4vw, 44px);
+    line-height: 1.12;
+    letter-spacing: -0.022em;
+    text-wrap: balance;
+  }
+  .head-wide .h2 {
+    font-size: clamp(32px, 4.2vw, 54px);
+  }
+  .h3 {
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.012em;
+    line-height: 1.3;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  .lede {
+    font-size: clamp(18px, 1.5vw, 20px);
+    line-height: 1.55;
+    max-width: 34em;
+  }
+  .body-lg {
+    line-height: 1.6;
+  }
+  /* Section labels: plain text with a short rule, not tracked mono caps */
+  .eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--color-muted);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background: var(--color-blue);
+    flex-shrink: 0;
+  }
+  .hero-col .eyebrow {
+    justify-content: center;
+  }
+  .kicker {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .head {
+    gap: 16px;
+  }
+
+  /* Surfaces: small radii, flat, no gradients */
+  .btn {
+    border-radius: 6px;
+  }
+  .nav-links .btn,
+  .menu-btn {
+    border-radius: 6px;
+  }
+  .nav-bar {
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(17, 17, 19, 0.05);
+  }
+  .mark {
+    border-radius: 6px;
+  }
+  .card,
+  .stepcards li,
+  .callout,
+  .neutral,
+  .sector,
+  .tbl,
+  .lend-steps,
+  .panel {
+    border-radius: 8px;
+    box-shadow: none;
+  }
+  .card.feature,
+  .card.level-3,
+  .sector.live {
+    background: var(--color-card);
+  }
+  .card.level-3 {
+    border-color: var(--color-text);
+  }
+  .practice,
+  .record,
+  .report {
+    border-radius: 10px;
+  }
+  .cta,
+  .contact {
+    border-radius: 12px;
+  }
+  .cta {
+    background: var(--color-band);
+    border: 0;
+  }
+  .contact-side {
+    background: var(--color-band);
+  }
+  .htag,
+  .jumps a,
+  .role,
+  .sbadge {
+    border-radius: 6px;
+  }
+  .strong,
+  .badge,
+  .pill-grey,
+  .chip {
+    border-radius: 4px;
+  }
+  .stepcards .n,
+  .record-icon,
+  .thanks-icon {
+    border-radius: 6px;
+  }
+  .f input,
+  .f textarea {
+    border-radius: 6px;
+  }
+
+  /* Hero: no glow; report is a plain, crisp panel */
+  .hero-copy {
+    gap: 0;
+  }
+  .hero-copy .eyebrow {
+    margin-bottom: 20px;
+  }
+  .hero-copy .h1 {
+    margin-bottom: 24px;
+  }
+  .hero-copy .lede {
+    margin-bottom: 32px;
+  }
+  .hero-copy .actions {
+    margin-top: 0;
+  }
+  .hero-copy .small {
+    margin-top: 16px;
+  }
+  .report {
+    box-shadow:
+      0 1px 2px rgba(17, 17, 19, 0.05),
+      0 16px 40px -20px rgba(17, 17, 19, 0.18);
+  }
+  .pill-grey {
+    font-size: 12px;
+  }
+  /* Small phones: tighter panel padding, ring and facts stack cleanly */
+  @media (max-width: 480px) {
+    .report {
+      padding: 20px;
+    }
+    .score-row {
+      gap: 20px;
+    }
+  }
+
+  /* Open columns: rules between items instead of boxes */
+  .grid-open {
+    gap: 0;
+  }
+  .card.card-open {
+    background: none;
+    border: 0;
+    border-top: 1px solid var(--color-line);
+    border-radius: 0;
+    padding: 24px 0;
+  }
+  @media (min-width: 760px) {
+    .grid-open {
+      border-top: 1px solid var(--color-text);
+    }
+    .card.card-open {
+      border-top: 0;
+      border-left: 1px solid var(--color-line);
+      padding: 28px 28px 4px;
+    }
+    .card.card-open:first-child {
+      border-left: 0;
+      padding-left: 0;
+    }
+  }
+
+  /* Figures: ruled columns, no box */
+  .figures,
+  .tiles {
+    background: none;
+    border: 0;
+    border-radius: 0;
+    gap: 0 32px;
+  }
+  .figures > div,
+  .tiles > div {
+    background: none;
+    padding: 20px 0 4px;
+    border-top: 1px solid var(--color-text);
+  }
+  .fig {
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+
+  /* Process: plain rules, the last one in the accent */
+  .steps li {
+    border-top-width: 2px;
+  }
+
+  /* Audience cards: same quiet card; the Free badge marks suppliers */
+  .aud > .card {
+    padding: 28px;
   }
 
   /* =====================================================
@@ -1918,6 +2155,47 @@
     }
     .thanks {
       animation: pop 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    /* Design pass: drop the decorative motion, keep the data motion
+       (score ring, bars, meters, step rules) and the scroll fade. */
+    .hero::after,
+    .report::after,
+    .cta::before,
+    .btn-blue::after {
+      display: none;
+    }
+    .word,
+    .report,
+    .badge,
+    .htag.on,
+    .record-icon,
+    .flow:not(.arm) .done,
+    .flow.in .done,
+    .timeline .next .mono::before {
+      animation: none;
+    }
+    .badge {
+      background: var(--color-blue);
+    }
+    .card:hover,
+    .stepcards li:hover,
+    .sector:hover,
+    .rv.in.card:hover,
+    .rv.in.sector:hover,
+    .stepcards li.rv.in:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    .card:hover .card-top svg {
+      transform: none;
+    }
+    .card.level-3:not(.arm),
+    .card.level-3.in {
+      box-shadow: none;
+    }
+    .steps li.last::before {
+      box-shadow: none;
     }
   }
 }

@@ -1,6 +1,5 @@
 import { Section, SectionHead } from "@/components/layout/Section";
 import { Card } from "@/components/ui/Card";
-import { problemIcons } from "@/components/ui/icons";
 import { home } from "@/content/home";
 
 export function Problem() {
@@ -8,15 +7,10 @@ export function Problem() {
   return (
     <Section>
       <SectionHead eyebrow={p.eyebrow} title={p.title} wide />
-      <div className="grid-auto">
+      <div className="grid-auto grid-open">
         {p.cards.map((c, i) => {
-          const Icon = problemIcons[c.icon];
           return (
-            <Card key={c.num} index={i}>
-              <div className="card-top">
-                <span className="num">{c.num}</span>
-                <Icon size={28} />
-              </div>
+            <Card key={c.num} index={i} className="card-open">
               <h3 className="h3">{c.title}</h3>
               <p className="muted">{c.body}</p>
             </Card>
