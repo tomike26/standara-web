@@ -5,7 +5,7 @@ type IconProps = SVGProps<SVGSVGElement> & { size?: number };
 
 function Svg({
   size = 24,
-  stroke = "#d4d4d8",
+  stroke = "#3f3f46",
   strokeWidth = 1.8,
   children,
   ...rest

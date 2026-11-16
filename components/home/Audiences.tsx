@@ -19,7 +19,7 @@ export function Audiences() {
           >
             {c.badge ? (
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <span className="kicker" style={{ color: "#d4d4d8" }}>
+                <span className="kicker" style={{ color: "#3f3f46" }}>
                   {c.kicker}
                 </span>
                 <Badge>{c.badge}</Badge>

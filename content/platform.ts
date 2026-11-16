@@ -70,7 +70,7 @@ export const platform = {
     title: "Proven past delivery: the best guide to future delivery",
     body: "A 0–100 score in five bands, from Limited to Exceptional. Explainable, challengeable, and never a ranking. Each score comes with a recommended contract value: a lower band says “start smaller”, never “no”.",
     bandsLabel: "Five score bands from Limited to Exceptional",
-    bands: ["#2a2a30", "#5a3f17", "#9a6b26", "#e8a33d", "#f6d59e"],
+    bands: ["#e7e5df", "#5a3f17", "#9a6b26", "#e8a33d", "#f6d59e"],
     bandsStart: "0 · LIMITED",
     bandsEnd: "EXCEPTIONAL · 100",
     ticks: [
