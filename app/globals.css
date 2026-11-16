@@ -115,7 +115,7 @@
       overflow-x: clip;
     }
     .wrap {
-      padding: 0 16px;
+      padding: 0 12px;
     }
     /* Floating nav lines up with the page edges */
     .nav .wrap {
