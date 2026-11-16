@@ -104,6 +104,24 @@
     margin: 0 auto;
     padding: 0 clamp(24px, 5vw, 32px);
   }
+  /* Phones: the whole page (section backgrounds and dividers included)
+     sits in from the screen edges; inner padding shrinks to match. */
+  @media (max-width: 759px) {
+    main,
+    .footer {
+      margin-inline: 12px;
+    }
+    main {
+      overflow-x: clip;
+    }
+    .wrap {
+      padding: 0 16px;
+    }
+    /* Floating nav lines up with the page edges */
+    .nav .wrap {
+      padding: 0 12px;
+    }
+  }
   .sec {
     padding-top: clamp(64px, 9vw, 112px);
     padding-bottom: clamp(64px, 9vw, 112px);
