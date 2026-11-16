@@ -31,7 +31,7 @@ svg { display: block; }
 .skip { position: absolute; left: -999px; top: 8px; background: var(--blue); color: #fff; padding: 10px 14px; z-index: 99; border-radius: 6px; }
 .skip:focus { left: 8px; }
 
-.wrap { max-width: 1520px; margin: 0 auto; padding: 0 clamp(20px, 4vw, 28px); }
+.wrap { max-width: 1520px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 32px); }
 .sec { padding-top: clamp(64px, 9vw, 112px); padding-bottom: clamp(64px, 9vw, 112px); }
 .band { background: var(--band); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .deep { background: var(--bg-deep); }
