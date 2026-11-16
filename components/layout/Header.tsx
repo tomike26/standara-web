@@ -35,11 +35,14 @@ export function Header() {
     };
     document.addEventListener("keydown", onKey);
     // Stop the page scrolling behind the open menu.
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    // Lock <html>, not <body>: with overflow-x: clip on <html>, a hidden
+    // <body> becomes its own scroller and the sticky nav jumps to the top.
+    const root = document.documentElement;
+    const prevOverflow = root.style.overflow;
+    root.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prevOverflow;
+      root.style.overflow = prevOverflow;
     };
   }, [open]);
 
