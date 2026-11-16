@@ -10,7 +10,11 @@ export function AssuranceScale() {
       className="wrap sec"
       style={{ display: "flex", flexDirection: "column", gap: 48 }}
     >
-      <SectionHead title={a.title} style={{ marginBottom: 0 }} />
+      <SectionHead
+        eyebrow={a.eyebrow}
+        title={a.title}
+        style={{ marginBottom: 0 }}
+      />
       {/* Stepped heights; dots light in sequence; level 3 glows when shown. */}
       <div className="levels">
         {a.levels.map((l, i) => {

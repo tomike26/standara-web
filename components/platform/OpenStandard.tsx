@@ -1,11 +1,13 @@
 import { Reveal } from "@/components/motion/Reveal";
 import { platform } from "@/content/platform";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function OpenStandard() {
   const s = platform.standard;
   return (
     <section className="wrap sec split" style={{ alignItems: "start" }}>
       <Reveal className="stack">
+        <Eyebrow>{s.eyebrow}</Eyebrow>
         <h2 className="h2">{s.title}</h2>
         <p className="body-lg">{s.body}</p>
       </Reveal>

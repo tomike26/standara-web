@@ -1,11 +1,13 @@
 import { SplitWords } from "@/components/motion/SplitWords";
 import { platform } from "@/content/platform";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function PlatformHero() {
   const h = platform.hero;
   return (
     <section className="hero">
       <div className="wrap hero-col">
+        <Eyebrow>{h.eyebrow}</Eyebrow>
         <h1 className="h1 h1-sub">
           <SplitWords text={h.title} />
         </h1>

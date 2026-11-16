@@ -17,6 +17,7 @@ export const who = {
   },
 
   hero: {
+    eyebrow: "WHO IT'S FOR",
     title: "Built for everyone on the contract",
     lede: "Delivery proven for a council counts with a private buyer, and the reverse. One record serves buyers, suppliers and lenders.",
     jumps: [
@@ -27,6 +28,7 @@ export const who = {
   },
 
   buyers: {
+    eyebrow: "COUNCILS, HOUSING ASSOCIATIONS, NHS, PRIMES",
     id: "buyers",
     title: "Buyers: no payment without proof",
     body: "Award on evidence, pay only for proven delivery and report without rework. The record is open and exportable, so you are never locked in.",
@@ -61,12 +63,14 @@ export const who = {
       ],
     },
     callout: {
+      eyebrow: "FOR PRIMES AND PRIVATE BUYERS",
       body: "Choose subcontractors on proof, pay only for delivered work, show fair payment on every public bid, and keep the Building Safety Act record of who installed what.",
     },
     note: "Targets are for the 2027 pilot.",
   },
 
   suppliers: {
+    eyebrow: "SUPPLIERS AND SUBCONTRACTORS · FREE",
     id: "suppliers",
     title: "Suppliers: proof that wins work and gets paid",
     body: "Your proven delivery travels with you. Small and new firms compete on proof, not size or company age.",
@@ -123,6 +127,7 @@ export const who = {
   },
 
   lenders: {
+    eyebrow: "LENDERS, INSURERS AND SURETIES",
     id: "lenders",
     title: "Lenders: facts no credit file holds",
     body: "Whether work was delivered, who confirmed it, and whether the buyer cleared the invoice. Fund work that is already proven, decide in hours on one consented data pack, and watch the record live.",
@@ -160,6 +165,7 @@ export const who = {
   },
 
   contact: {
+    eyebrow: "JOIN THE 2027 PILOT",
     id: "contact",
     title: "Let's prove delivery together",
     body: "Starting with council housing repairs: no service invoice paid until delivery is proven, and a partner lender funding council-confirmed invoices within 48 hours.",

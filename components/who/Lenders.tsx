@@ -1,6 +1,7 @@
 import { Reveal } from "@/components/motion/Reveal";
 import { ScalesIcon } from "@/components/ui/icons";
 import { who } from "@/content/who";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function Lenders() {
   const l = who.lenders;
@@ -12,6 +13,7 @@ export function Lenders() {
     >
       <div className="split" style={{ gap: 40, alignItems: "end" }}>
         <Reveal className="stack">
+          <Eyebrow>{l.eyebrow}</Eyebrow>
           <h2 className="h2">{l.title}</h2>
           <p className="body-lg">{l.body}</p>
         </Reveal>

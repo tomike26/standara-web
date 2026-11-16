@@ -9,7 +9,12 @@ export function Products() {
       variant="band"
       innerStyle={{ display: "flex", flexDirection: "column", gap: 48 }}
     >
-      <SectionHead title={p.title} style={{ marginBottom: 0 }} />
+      <SectionHead
+        eyebrow={p.eyebrow}
+        title={p.title}
+        wide
+        style={{ marginBottom: 0 }}
+      />
       <div className="grid-4">
         {p.items.map((item, i) => (
           <Card

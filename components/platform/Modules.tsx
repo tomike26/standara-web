@@ -8,7 +8,7 @@ export function Modules() {
   const m = platform.modules;
   return (
     <Section>
-      <SectionHead title={m.title} />
+      <SectionHead eyebrow={m.eyebrow} title={m.title} />
       <div
         className="grid-auto"
         style={{

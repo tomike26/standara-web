@@ -1,27 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import {
-  IBM_Plex_Mono,
-  Plus_Jakarta_Sans,
-  Space_Grotesk,
-} from "next/font/google";
+import { Archivo, IBM_Plex_Mono, Public_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SITE_URL, site } from "@/content/site";
 import "./globals.css";
 
-// Headings: Space Grotesk. Body: Plus Jakarta Sans. Labels: IBM Plex Mono.
-const spaceGrotesk = Space_Grotesk({
+// Headings: Archivo. Body: Public Sans. Labels: IBM Plex Mono.
+const archivo = Archivo({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-space-grotesk",
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-archivo",
   display: "swap",
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const publicSans = Public_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
-  variable: "--font-jakarta",
+  variable: "--font-public-sans",
   display: "swap",
 });
 
@@ -60,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="en-GB"
-      className={`${spaceGrotesk.variable} ${jakarta.variable} ${plexMono.variable}`}
+      className={`${archivo.variable} ${publicSans.variable} ${plexMono.variable}`}
       data-scroll-behavior="smooth"
     >
       <body>

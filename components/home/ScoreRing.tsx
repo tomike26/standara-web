@@ -80,7 +80,7 @@ export function ScoreRing({
         x="66"
         y="70"
         textAnchor="middle"
-        fontFamily="var(--font-space-grotesk), sans-serif"
+        fontFamily="var(--font-archivo), sans-serif"
         fontWeight="700"
         fontSize="38"
         fill="#f1f5fb"

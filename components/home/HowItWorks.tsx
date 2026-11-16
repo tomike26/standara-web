@@ -8,7 +8,7 @@ export function HowItWorks() {
   const lastIdx = h.steps.length - 1;
   return (
     <Section id={h.id}>
-      <SectionHead title={h.title} />
+      <SectionHead eyebrow={h.eyebrow} title={h.title} wide />
       {/* Each top rule draws left → right, 250ms apart; step 5's glows blue. */}
       <Reveal as="ol" fade={false} className="steps">
         {h.steps.map((s, i) => (

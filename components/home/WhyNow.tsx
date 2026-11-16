@@ -1,11 +1,13 @@
 import { Reveal } from "@/components/motion/Reveal";
 import { home } from "@/content/home";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function WhyNow() {
   const w = home.whyNow;
   return (
     <section className="wrap sec split">
       <Reveal className="stack">
+        <Eyebrow>{w.eyebrow}</Eyebrow>
         <h2 className="h2">{w.title}</h2>
         <p className="body-lg">{w.body}</p>
       </Reveal>

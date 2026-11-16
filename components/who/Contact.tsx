@@ -1,6 +1,7 @@
 import { Reveal } from "@/components/motion/Reveal";
 import { ContactForm } from "./ContactForm";
 import { who } from "@/content/who";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function Contact() {
   const c = who.contact;
@@ -8,6 +9,7 @@ export function Contact() {
     <section id={c.id} className="wrap sec-end" aria-labelledby="contact-title">
       <Reveal className="contact">
         <div className="contact-side">
+          <Eyebrow>{c.eyebrow}</Eyebrow>
           <h2
             className="h2"
             id="contact-title"

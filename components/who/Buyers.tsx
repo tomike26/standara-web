@@ -1,6 +1,7 @@
 import { SectionHead } from "@/components/layout/Section";
 import { Reveal } from "@/components/motion/Reveal";
 import { who } from "@/content/who";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function Buyers() {
   const b = who.buyers;
@@ -12,6 +13,7 @@ export function Buyers() {
       style={{ display: "flex", flexDirection: "column", gap: 48 }}
     >
       <SectionHead
+        eyebrow={b.eyebrow}
         title={b.title}
         body={b.body}
         style={{ marginBottom: 0, maxWidth: 780 }}
@@ -43,6 +45,7 @@ export function Buyers() {
         </Reveal>
         <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
           <Reveal className="callout">
+            <Eyebrow>{b.callout.eyebrow}</Eyebrow>
             <p>{b.callout.body}</p>
           </Reveal>
           <p className="note">{b.note}</p>

@@ -2,6 +2,7 @@ import { SplitWords } from "@/components/motion/SplitWords";
 import { ButtonLink } from "@/components/ui/Button";
 import { TrustScoreReport } from "./TrustScoreReport";
 import { home } from "@/content/home";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function Hero() {
   const h = home.hero;
@@ -9,6 +10,7 @@ export function Hero() {
     <section className="hero">
       <div className="wrap hero-grid">
         <div className="hero-copy">
+          <Eyebrow>{h.eyebrow}</Eyebrow>
           <h1 className="h1">
             <SplitWords text={h.title} />
           </h1>

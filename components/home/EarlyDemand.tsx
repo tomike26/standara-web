@@ -6,7 +6,11 @@ export function EarlyDemand() {
   const d = home.demand;
   return (
     <Section variant="end">
-      <SectionHead title={d.title} style={{ marginBottom: 40 }} />
+      <SectionHead
+        eyebrow={d.eyebrow}
+        title={d.title}
+        style={{ marginBottom: 40 }}
+      />
       <div className="grid-auto">
         {d.cards.map((c, i) => (
           <Card key={c.title} index={i} style={{ gap: 10 }}>

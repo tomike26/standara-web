@@ -11,7 +11,7 @@ async function loadFont(weight: number): Promise<ArrayBuffer | null> {
     // No browser UA → Google Fonts serves TTF, which the OG renderer understands.
     const css = await (
       await fetch(
-        `https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@${weight}`,
+        `https://fonts.googleapis.com/css2?family=Archivo:wght@${weight}`,
       )
     ).text();
     const url = css.match(
@@ -27,13 +27,13 @@ export default async function OpengraphImage() {
   const [w700, w600] = await Promise.all([loadFont(700), loadFont(600)]);
   const fonts = [
     w700 && {
-      name: "Space Grotesk",
+      name: "Archivo",
       data: w700,
       weight: 700 as const,
       style: "normal" as const,
     },
     w600 && {
-      name: "Space Grotesk",
+      name: "Archivo",
       data: w600,
       weight: 600 as const,
       style: "normal" as const,
@@ -57,7 +57,7 @@ export default async function OpengraphImage() {
         backgroundImage:
           "radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.175), rgba(255, 255, 255, 0) 55%)",
         padding: "72px 80px",
-        fontFamily: fonts.length ? "Space Grotesk" : "sans-serif",
+        fontFamily: fonts.length ? "Archivo" : "sans-serif",
         color: "#f5f5f7",
       }}
     >

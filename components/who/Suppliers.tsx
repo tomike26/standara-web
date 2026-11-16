@@ -2,6 +2,7 @@ import { CountUp } from "@/components/motion/CountUp";
 import { Reveal } from "@/components/motion/Reveal";
 import { ButtonLink } from "@/components/ui/Button";
 import { who } from "@/content/who";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function Suppliers() {
   const s = who.suppliers;
@@ -22,6 +23,7 @@ export function Suppliers() {
           }}
         >
           <div className="stack" style={{ maxWidth: 760 }}>
+            <Eyebrow>{s.eyebrow}</Eyebrow>
             <h2 className="h2" id="suppliers-title">
               {s.title}
             </h2>

@@ -3,6 +3,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { Card } from "@/components/ui/Card";
 import { TickIcon } from "@/components/ui/icons";
 import { platform } from "@/content/platform";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 export function TrustScore() {
   const t = platform.trustScore;
@@ -14,6 +15,7 @@ export function TrustScore() {
       >
         <div className="split" style={{ gap: 48 }}>
           <Reveal className="stack">
+            <Eyebrow>{t.eyebrow}</Eyebrow>
             <h2 className="h2" id="trust-score-title">
               {t.title}
             </h2>

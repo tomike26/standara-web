@@ -1,5 +1,6 @@
 import type { CSSProperties, ReactNode } from "react";
 import { Reveal } from "@/components/motion/Reveal";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 
 /**
  * Section shells matching the design:
@@ -52,22 +53,31 @@ export function Section({
   );
 }
 
-/** H2 (+ optional body) block that fades up. */
+/** Eyebrow + H2 (+ optional body) block that fades up. */
 export function SectionHead({
+  eyebrow,
   title,
   titleId,
+  wide,
   body,
   className,
   style,
 }: {
+  eyebrow?: string;
   title: string;
   titleId?: string;
+  /** Let the headline run the full page width. */
+  wide?: boolean;
   body?: string;
   className?: string;
   style?: CSSProperties;
 }) {
   return (
-    <Reveal className={cx("head", className)} style={style}>
+    <Reveal
+      className={cx("head", wide && "head-wide", className)}
+      style={style}
+    >
+      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
       <h2 className="h2" id={titleId}>
         {title}
       </h2>

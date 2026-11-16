@@ -2,6 +2,7 @@
 
 export const home = {
   hero: {
+    eyebrow: "THE PROCUREMENT PERFORMANCE BUREAU",
     title: "Proven delivery, trusted everywhere.",
     lede: "Like a credit bureau, but for supplier delivery. Standara turns independently confirmed contract delivery into a record that buyers award on and lenders fund on.",
     primary: { label: "Book a demo", href: "/who-its-for#contact" },
@@ -36,6 +37,7 @@ export const home = {
   },
 
   problem: {
+    eyebrow: "THE PROBLEM",
     title:
       "Supplier delivery is invisible. So buyers award blind and lenders lend blind.",
     cards: [
@@ -88,6 +90,7 @@ export const home = {
   },
 
   how: {
+    eyebrow: "HOW IT WORKS",
     id: "how",
     title:
       "Proven delivery becomes a record. The record becomes a Trust Score.",
@@ -119,6 +122,7 @@ export const home = {
       },
     ],
     practice: {
+      eyebrow: "IN PRACTICE",
       body: "A roofing contractor finishes a £250k council milestone. The council confirms it, the invoice is released, and a Verified Contract Record lifts the contractor's Trust Score. A housing association searching for roofers sees 12 corroborated contracts before it awards. A partner lender funds the next invoice on the same record.",
       link: { label: "Explore the platform", href: "/platform" },
       flow: [
@@ -161,6 +165,7 @@ export const home = {
   },
 
   whyNow: {
+    eyebrow: "WHY NOW",
     title: "Buyers must now prove delivery. Nobody holds the evidence.",
     body: "New rules require public and private buyers to record, publish and act on supplier performance. Standara holds the evidence they need.",
     timeline: [
@@ -193,6 +198,7 @@ export const home = {
   },
 
   demand: {
+    eyebrow: "EARLY DEMAND",
     title: "Built with the buyers who will use it",
     cards: [
       {

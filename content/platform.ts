@@ -8,6 +8,7 @@ export const platform = {
   },
 
   hero: {
+    eyebrow: "THE PLATFORM",
     title: "One record. Every module reads and writes it.",
     lede: "Registries tell you a supplier exists. Accreditations tell you it is qualified. Standara tells you whether it delivers.",
     tags: [
@@ -18,6 +19,7 @@ export const platform = {
   },
 
   modules: {
+    eyebrow: "SIX MODULES",
     title: "From first bid to funded invoice, on one record",
     items: [
       {
@@ -57,11 +59,13 @@ export const platform = {
       },
     ],
     record: {
+      eyebrow: "THE RECORD",
       body: "One Verified Contract Record per contract, on an immutable ledger. Every module reads and writes it, and no party can alter another's data.",
     },
   },
 
   trustScore: {
+    eyebrow: "THE TRUST SCORE",
     id: "trust-score",
     title: "Proven past delivery: the best guide to future delivery",
     body: "A 0–100 score in five bands, from Limited to Exceptional. Explainable, challengeable, and never a ranking. Each score comes with a recommended contract value: a lower band says “start smaller”, never “no”.",
@@ -98,6 +102,7 @@ export const platform = {
   },
 
   assurance: {
+    eyebrow: "THE STANDARA ASSURANCE SCALE",
     id: "assurance",
     title: "Every piece of evidence shows how far you can rely on it",
     levels: [
@@ -127,6 +132,7 @@ export const platform = {
   },
 
   products: {
+    eyebrow: "PRODUCTS",
     title: "Everything on one record",
     items: [
       {
@@ -182,6 +188,7 @@ export const platform = {
   },
 
   standard: {
+    eyebrow: "SETTING THE STANDARD",
     title: "An open standard for proof of delivery",
     body: "We have proposed procurement delivery standards to BSI. Buyers and frameworks can write the standard into contracts. It is open to everyone, so there is no lock-in, and Standara runs the record that meets it.",
     sectors: [

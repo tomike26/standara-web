@@ -7,7 +7,7 @@ export function Problem() {
   const p = home.problem;
   return (
     <Section>
-      <SectionHead title={p.title} />
+      <SectionHead eyebrow={p.eyebrow} title={p.title} wide />
       <div className="grid-auto">
         {p.cards.map((c, i) => {
           const Icon = problemIcons[c.icon];
