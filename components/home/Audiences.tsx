@@ -2,6 +2,7 @@ import { Section, SectionHead } from "@/components/layout/Section";
 import { ArrowLink } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Chip";
+import { Photo } from "@/components/ui/Photo";
 import { home } from "@/content/home";
 
 export function Audiences() {
@@ -17,6 +18,14 @@ export function Audiences() {
             className={c.featured ? "feature" : undefined}
             style={{ gap: 16 }}
           >
+            <Photo
+              src={c.photo.src}
+              alt={c.photo.alt}
+              ratio="16 / 10"
+              sizes="(min-width: 1000px) 400px, 100vw"
+              position={c.photo.position}
+              className="card-photo"
+            />
             {c.badge ? (
               <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                 <span className="kicker">{c.kicker}</span>

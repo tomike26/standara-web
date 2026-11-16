@@ -2,6 +2,7 @@ import { SectionHead } from "@/components/layout/Section";
 import { Reveal } from "@/components/motion/Reveal";
 import { who } from "@/content/who";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Photo } from "@/components/ui/Photo";
 
 export function Buyers() {
   const b = who.buyers;
@@ -27,7 +28,7 @@ export function Buyers() {
           </Reveal>
         ))}
       </ol>
-      <div className="split" style={{ gap: 20, alignItems: "start" }}>
+      <div className="split" style={{ gap: 20, alignItems: "stretch" }}>
         <Reveal className="tbl" role="table" aria-label={b.table.label}>
           <div className="row th" role="row">
             {b.table.headers.map((h) => (
@@ -49,6 +50,15 @@ export function Buyers() {
             <p>{b.callout.body}</p>
           </Reveal>
           <p className="note">{b.note}</p>
+          <Reveal index={1} className="fill-photo">
+            <Photo
+              src="/images/who-buyers.jpg"
+              alt="Two colleagues checking a printed contract return"
+              ratio="3 / 2"
+              sizes="(min-width: 1000px) 600px, 100vw"
+              position="45% 50%"
+            />
+          </Reveal>
         </div>
       </div>
     </section>

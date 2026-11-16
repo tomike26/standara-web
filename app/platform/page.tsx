@@ -21,7 +21,8 @@ export const metadata: Metadata = {
 
 export default function PlatformPage() {
   return (
-    <>
+    // .pf scopes the Platform page's own motion (see "PLATFORM MOTION" in globals.css).
+    <div className="pf">
       <PlatformHero />
       <Modules />
       <TrustScore />
@@ -29,6 +30,6 @@ export default function PlatformPage() {
       <Products />
       <OpenStandard />
       <CtaPanel {...platform.cta} />
-    </>
+    </div>
   );
 }

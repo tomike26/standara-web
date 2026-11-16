@@ -19,12 +19,13 @@ export const metadata: Metadata = {
 
 export default function WhoItsForPage() {
   return (
-    <>
+    // .wf scopes this page's own motion (see "WHO IT'S FOR MOTION" in globals.css).
+    <div className="wf">
       <WhoHero />
       <Buyers />
       <Suppliers />
       <Lenders />
       <Contact />
-    </>
+    </div>
   );
 }
