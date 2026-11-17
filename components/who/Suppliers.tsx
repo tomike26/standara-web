@@ -13,29 +13,35 @@ export function Suppliers() {
         className="wrap sec"
         style={{ display: "flex", flexDirection: "column", gap: 48 }}
       >
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            gap: 28,
-          }}
-        >
-          <div className="stack" style={{ maxWidth: 760 }}>
-            <Eyebrow>{s.eyebrow}</Eyebrow>
-            <h2 className="h2" id="suppliers-title">
-              {s.title}
-            </h2>
-            <p className="body-lg">{s.body}</p>
+        {/* Copy and figures on the left; the photo fills the column beside them. */}
+        <div className="sup-top">
+          <div className="sup-copy">
+            <div className="stack" style={{ maxWidth: 640 }}>
+              <Eyebrow>{s.eyebrow}</Eyebrow>
+              <h2 className="h2" id="suppliers-title">
+                {s.title}
+              </h2>
+              <p className="body-lg">{s.body}</p>
+            </div>
+            <div className="tiles">
+              {s.tiles.map((t, i) => (
+                <Reveal key={t.value} index={i}>
+                  <p className={t.accent ? "fig accent" : "fig"}>
+                    {t.countUp ? <CountUp value={t.value} /> : t.value}
+                  </p>
+                  <p>{t.body}</p>
+                </Reveal>
+              ))}
+            </div>
+            <p className="note">{s.note}</p>
           </div>
-          <Reveal index={1} className="head-photo">
+          <Reveal index={1} className="sup-photo">
             <Photo
               src="/images/who-suppliers.jpg"
               alt="Site crew in hi-vis pouring a concrete slab"
-              ratio="3 / 2"
-              sizes="380px"
-              position="65% 45%"
+              ratio="auto"
+              sizes="(min-width: 1000px) 540px, 100vw"
+              position="62% 45%"
             />
           </Reveal>
         </div>
@@ -53,19 +59,6 @@ export function Suppliers() {
             </Reveal>
           ))}
         </ol>
-        <div className="tiles">
-          {s.tiles.map((t, i) => (
-            <Reveal key={t.value} index={i}>
-              <p className={t.accent ? "fig accent" : "fig"}>
-                {t.countUp ? <CountUp value={t.value} /> : t.value}
-              </p>
-              <p>{t.body}</p>
-            </Reveal>
-          ))}
-        </div>
-        <p className="note" style={{ marginTop: -24 }}>
-          {s.note}
-        </p>
       </div>
     </section>
   );
