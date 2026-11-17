@@ -24,7 +24,12 @@ export function TrustScoreReport() {
             <strong>{r.contracts.count}</strong> {r.contracts.label}
           </p>
           <p className="with-icon">
-            <ShieldIcon size={16} stroke="#9a6412" strokeWidth={2.5} />
+            <ShieldIcon
+              size={16}
+              stroke="currentColor"
+              style={{ color: "var(--color-blue-text)" }}
+              strokeWidth={2.5}
+            />
             {r.assurance}
           </p>
         </div>

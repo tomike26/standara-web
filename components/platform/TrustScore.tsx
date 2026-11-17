@@ -49,7 +49,12 @@ export function TrustScore() {
             <ul className="ticks">
               {t.ticks.map((tick) => (
                 <li key={tick}>
-                  <TickIcon size={20} stroke="#9a6412" strokeWidth={2.5} />
+                  <TickIcon
+                    size={20}
+                    stroke="currentColor"
+                    style={{ color: "var(--color-good-text)" }}
+                    strokeWidth={2.5}
+                  />
                   {tick}
                 </li>
               ))}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Logo } from "./Logo";
+import { ThemeToggle } from "./ThemeToggle";
 import { CloseIcon, MenuIcon } from "@/components/ui/icons";
 import { buttonClass } from "@/components/ui/Button";
 import { site } from "@/content/site";
@@ -59,17 +60,20 @@ export function Header() {
       <div className="wrap">
         <nav aria-label={nav.label} className="nav-bar">
           <Logo />
-          <button
-            ref={buttonRef}
-            type="button"
-            className="menu-btn"
-            aria-expanded={open}
-            aria-controls="site-nav-links"
-            onClick={() => setOpen((o) => !o)}
-          >
-            {open ? <CloseIcon size={18} /> : <MenuIcon size={18} />}
-            {open ? "Close" : nav.menuLabel}
-          </button>
+          <div className="nav-tools">
+            <ThemeToggle />
+            <button
+              ref={buttonRef}
+              type="button"
+              className="menu-btn"
+              aria-expanded={open}
+              aria-controls="site-nav-links"
+              onClick={() => setOpen((o) => !o)}
+            >
+              {open ? <CloseIcon size={18} /> : <MenuIcon size={18} />}
+              {open ? "Close" : nav.menuLabel}
+            </button>
+          </div>
           <div
             id="site-nav-links"
             className={open ? "nav-links open" : "nav-links"}

@@ -8,7 +8,11 @@ export function TheRecord() {
   return (
     <Reveal className="record" index={1}>
       <span className="record-icon">
-        <DatabaseIcon size={28} stroke="#9a6412" />
+        <DatabaseIcon
+          size={28}
+          stroke="currentColor"
+          style={{ color: "var(--color-blue-text)" }}
+        />
       </span>
       <div
         style={{
@@ -19,7 +23,7 @@ export function TheRecord() {
         }}
       >
         <Eyebrow style={{ fontSize: 12 }}>{r.eyebrow}</Eyebrow>
-        <p style={{ fontSize: 18, color: "#2a2a2e" }}>{r.body}</p>
+        <p style={{ fontSize: 18, color: "var(--color-text-2)" }}>{r.body}</p>
       </div>
     </Reveal>
   );

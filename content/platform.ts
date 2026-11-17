@@ -70,7 +70,7 @@ export const platform = {
     title: "Proven past delivery: the best guide to future delivery",
     body: "A 0–100 score in five bands, from Limited to Exceptional. Explainable, challengeable, and never a ranking. Each score comes with a recommended contract value: a lower band says “start smaller”, never “no”.",
     bandsLabel: "Five score bands from Limited to Exceptional",
-    bands: ["#e7e5df", "#5a3f17", "#9a6b26", "#e8a33d", "#f6d59e"],
+    bands: ["#dfe4ea", "#9aa9b9", "#3e5c76", "#e0a526", "#0e9f6e"],
     bandsStart: "0 · LIMITED",
     bandsEnd: "EXCEPTIONAL · 100",
     ticks: [
@@ -81,19 +81,19 @@ export const platform = {
     weights: [
       {
         pct: "50%",
-        meter: { width: "100%", color: "#f0b65c" },
+        meter: { width: "100%", color: "#e0a526" },
         title: "Delivery evidence",
         body: "Confirmed delivery, plus how it pays its subcontractors and the social value it delivered.",
       },
       {
         pct: "25%",
-        meter: { width: "50%", color: "#a1a1aa" },
+        meter: { width: "50%", color: "#3e5c76" },
         title: "Financial standing",
         body: "Can it carry this contract? Licensed credit data, total public commitments and distress events.",
       },
       {
         pct: "25%",
-        meter: { width: "50%", color: "#d4d4d8" },
+        meter: { width: "50%", color: "#9aa9b9" },
         title: "Accreditation",
         body: "Certificates, insurance and registrations, and whether they stay current during the contract.",
       },
@@ -138,7 +138,8 @@ export const platform = {
       {
         title: "Build the record",
         kind: "FREE FOR SUPPLIERS",
-        accent: "#f0b65c",
+        photo: { src: "/images/product-record.jpg", alt: "A tradesperson at work on site", position: "50% 35%" },
+        accent: "#e0a526",
         features: [
           "Verified company Profile",
           "Pre-filled, evidence-backed bids",
@@ -151,7 +152,8 @@ export const platform = {
       {
         title: "For buyers",
         kind: "BUYER SUBSCRIPTION",
-        accent: "#d4d4d8",
+        photo: { src: "/images/product-buyers.jpg", alt: "Invoices checked on a laptop", position: "50% 50%" },
+        accent: "#0e9f6e",
         features: [
           "Release, Hold or Review on every invoice",
           "Exception desk and disputes",
@@ -164,7 +166,8 @@ export const platform = {
       {
         title: "Performance Bureau",
         kind: "LICENSED",
-        accent: "#8a8a93",
+        photo: { src: "/images/product-bureau.jpg", alt: "A dashboard showing a quality score", position: "40% 50%" },
+        accent: "#3e5c76",
         features: [
           "Trust Score, 0–100",
           "Assurance Scale on every record",
@@ -175,7 +178,8 @@ export const platform = {
       {
         title: "Finance",
         kind: "PARTNER-FUNDED",
-        accent: "#52525b",
+        photo: { src: "/images/product-finance.jpg", alt: "A desk with papers and a calculator", position: "50% 50%" },
+        accent: "var(--color-text)",
         features: [
           "Early payment and invoice finance on verified invoices",
           "Contract award finance, by referral",
@@ -215,5 +219,10 @@ export const platform = {
     title: "See the record in action",
     body: "A 30-minute walkthrough of Pay, Comply and the Trust Score report.",
     button: { label: "Book a demo", href: "/who-its-for#contact" },
+    photo: {
+      src: "/images/cta-platform.jpg",
+      alt: "Performance graphs on a laptop screen",
+      position: "50% 40%",
+    },
   },
 } as const;

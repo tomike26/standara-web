@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Archivo, IBM_Plex_Mono, Public_Sans } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { THEME_SCRIPT } from "@/components/layout/ThemeToggle";
 import { SITE_URL, site } from "@/content/site";
 import "./globals.css";
 
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: "#ffffff",
-  colorScheme: "light",
+  colorScheme: "light dark",
 };
 
 export default function RootLayout({
@@ -58,7 +59,12 @@ export default function RootLayout({
       lang="en-GB"
       className={`${archivo.variable} ${publicSans.variable} ${plexMono.variable}`}
       data-scroll-behavior="smooth"
+      // The theme script sets data-theme before React hydrates.
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+      </head>
       <body>
         <a className="skip" href="#main">
           {site.skipLink}

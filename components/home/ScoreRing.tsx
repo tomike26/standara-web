@@ -59,7 +59,7 @@ export function ScoreRing({
         cy="66"
         r="54"
         fill="none"
-        stroke="#efede8"
+        style={{ stroke: "var(--color-surface-3)" }}
         strokeWidth="10"
       />
       <circle
@@ -69,7 +69,7 @@ export function ScoreRing({
         cy="66"
         r="54"
         fill="none"
-        stroke="#d18f2a"
+        style={{ stroke: "var(--color-blue-hi)" }}
         strokeWidth="10"
         strokeLinecap="round"
         strokeDasharray={dash}
@@ -83,7 +83,7 @@ export function ScoreRing({
         fontFamily="var(--font-archivo), sans-serif"
         fontWeight="800"
         fontSize="42"
-        fill="#111113"
+        style={{ fill: "var(--color-text)" }}
         aria-hidden="true"
       >
         {display ?? score}
@@ -94,7 +94,7 @@ export function ScoreRing({
         textAnchor="middle"
         fontFamily="var(--font-plex-mono), monospace"
         fontSize="11"
-        fill="#71717a"
+        style={{ fill: "var(--color-dim)" }}
         aria-hidden="true"
       >
         {outOf}

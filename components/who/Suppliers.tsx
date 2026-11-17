@@ -2,6 +2,7 @@ import { CountUp } from "@/components/motion/CountUp";
 import { Reveal } from "@/components/motion/Reveal";
 import { who } from "@/content/who";
 import { Eyebrow } from "@/components/ui/Eyebrow";
+import { Photo } from "@/components/ui/Photo";
 
 export function Suppliers() {
   const s = who.suppliers;
@@ -28,6 +29,15 @@ export function Suppliers() {
             </h2>
             <p className="body-lg">{s.body}</p>
           </div>
+          <Reveal index={1} className="head-photo">
+            <Photo
+              src="/images/who-suppliers.jpg"
+              alt="Site crew in hi-vis pouring a concrete slab"
+              ratio="3 / 2"
+              sizes="380px"
+              position="65% 45%"
+            />
+          </Reveal>
         </div>
         <ol className="stepcards">
           {s.steps.map((step, i) => (

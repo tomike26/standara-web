@@ -109,7 +109,7 @@ export function ContactForm() {
       {sent ? (
         <div className="thanks" ref={thanksRef} tabIndex={-1}>
           <span className="thanks-icon">
-            <TickIcon size={28} stroke="#1a1206" strokeWidth={3} />
+            <TickIcon size={28} stroke="#0b1f3a" strokeWidth={3} />
           </span>
           <h3 className="h3" style={{ fontSize: 28, fontWeight: 700 }}>
             {thanks.title}

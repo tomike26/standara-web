@@ -19,7 +19,11 @@ export function Lenders() {
         </Reveal>
         <Reveal className="neutral" index={1}>
           <span style={{ flexShrink: 0 }}>
-            <ScalesIcon size={32} stroke="#9a6412" />
+            <ScalesIcon
+              size={32}
+              stroke="currentColor"
+              style={{ color: "var(--color-blue-text)" }}
+            />
           </span>
           <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
             <h3 className="h3" style={{ fontSize: 20 }}>

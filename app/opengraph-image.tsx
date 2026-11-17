@@ -53,12 +53,12 @@ export default async function OpengraphImage() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        background: "#000000",
+        background: "#0b1f3a",
         backgroundImage:
-          "radial-gradient(circle at 85% 10%, rgba(255, 255, 255, 0.175), rgba(255, 255, 255, 0) 55%)",
+          "radial-gradient(circle at 85% 10%, rgba(224, 165, 38, 0.22), rgba(224, 165, 38, 0) 55%)",
         padding: "72px 80px",
         fontFamily: fonts.length ? "Archivo" : "sans-serif",
-        color: "#f5f5f7",
+        color: "#f6f5f1",
       }}
     >
       <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
@@ -67,7 +67,7 @@ export default async function OpengraphImage() {
             width: 64,
             height: 64,
             borderRadius: 13,
-            background: "#1c1c1f",
+            background: "#16314f",
             border: "2px solid rgba(255, 255, 255, 0.175)",
             display: "flex",
             alignItems: "center",
@@ -79,7 +79,7 @@ export default async function OpengraphImage() {
             height="38"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#e8a33d"
+            stroke="#e0a526"
             strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"

@@ -11,7 +11,7 @@ export function Logo({ size = "nav" }: { size?: "nav" | "footer" }) {
         className="mark"
         style={footer ? { width: 32, height: 32 } : undefined}
       >
-        <TickIcon size={20} stroke="#e8a33d" strokeWidth={3} />
+        <TickIcon size={20} stroke="#e0a526" strokeWidth={3} />
       </span>
       <span
         className="brand-name"

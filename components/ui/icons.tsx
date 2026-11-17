@@ -5,7 +5,7 @@ type IconProps = SVGProps<SVGSVGElement> & { size?: number };
 
 function Svg({
   size = 24,
-  stroke = "#3f3f46",
+  stroke = "currentColor",
   strokeWidth = 1.8,
   children,
   ...rest
@@ -90,6 +90,19 @@ export const MenuIcon = (p: IconProps) => (
 export const CloseIcon = (p: IconProps) => (
   <Svg strokeWidth={2} stroke="currentColor" {...p}>
     <path d="M6 6l12 12M18 6L6 18" />
+  </Svg>
+);
+
+export const SunIcon = (p: IconProps) => (
+  <Svg strokeWidth={2} {...p}>
+    <circle cx="12" cy="12" r="4" />
+    <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+  </Svg>
+);
+
+export const MoonIcon = (p: IconProps) => (
+  <Svg strokeWidth={2} {...p}>
+    <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" />
   </Svg>
 );
 

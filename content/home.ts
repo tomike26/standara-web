@@ -207,14 +207,17 @@ export const home = {
       {
         title: "3 council buyers",
         body: "have confirmed Standara solves a real problem they face today.",
+        photo: { src: "/images/demand-council.jpg", alt: "Leeds Town Hall, a council building in Yorkshire", position: "50% 30%" },
       },
       {
         title: "Pilot committed",
         body: "A council buyer in Yorkshire will pilot Standara when it goes live in 2027.",
+        photo: { src: "/images/demand-pilot.jpg", alt: "A row of brick terraced houses", position: "50% 60%" },
       },
       {
         title: "An open standard",
         body: "We have proposed procurement delivery standards to BSI, so buyers can write proof of delivery into contracts.",
+        photo: { src: "/images/demand-standard.jpg", alt: "Hands signing a document at a desk", position: "40% 35%" },
       },
     ],
   },
@@ -224,5 +227,10 @@ export const home = {
     title: "Join the 2027 pilot",
     body: "We are working with council housing-repairs teams, primes and lenders to prove pay-on-proof in live contracts.",
     button: { label: "Register your interest", href: "/who-its-for#contact" },
+    photo: {
+      src: "/images/cta-home.jpg",
+      alt: "A site worker in a hard hat on a building job",
+      position: "45% 35%",
+    },
   },
 } as const;

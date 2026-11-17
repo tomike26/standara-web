@@ -1,6 +1,7 @@
 import { Section, SectionHead } from "@/components/layout/Section";
 import { Card } from "@/components/ui/Card";
 import { home } from "@/content/home";
+import { Photo } from "@/components/ui/Photo";
 
 export function EarlyDemand() {
   const d = home.demand;
@@ -19,6 +20,14 @@ export function EarlyDemand() {
             className="card-open"
             style={{ gap: 10 }}
           >
+            <Photo
+              src={c.photo.src}
+              alt={c.photo.alt}
+              ratio="3 / 2"
+              sizes="(min-width: 760px) 400px, 100vw"
+              position={c.photo.position}
+              className="col-photo"
+            />
             <p
               className="h3"
               style={{
